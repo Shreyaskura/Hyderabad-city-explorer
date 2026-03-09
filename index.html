@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad City Explorer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <button class="logout-btn" onclick="window.location.href='login.html'">Logout</button>
+        </div>
+        <div class="header-content">
+            <h1>Hyderabad City Explorer 🏰</h1>
+            <p>Discover the best places in the City of Pearls</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for a place...">
+                <button id="locationBtn" class="location-btn" title="Find places near me">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="filters" id="categoryFilters">
+            <button class="filter-btn active" data-category="All">All</button>
+            <button class="filter-btn" data-category="Theatres">Theatres</button>
+            <button class="filter-btn" data-category="Cafes">Cafes</button>
+            <button class="filter-btn" data-category="Restaurants">Restaurants</button>
+            <button class="filter-btn" data-category="Tourist Places">Tourist Places</button>
+            <button class="filter-btn" data-category="Hospitals">Hospitals</button>
+        </section>
+
+        <section class="places-grid" id="placesGrid">
+            <!-- Cards will be injected here via JS -->
+        </section>
+        
+        <div id="noResults" class="no-results hidden">
+            <p>No places found matching your search.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
